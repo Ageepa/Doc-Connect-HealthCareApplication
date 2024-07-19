@@ -106,7 +106,7 @@ public class Controller {
 
         Date appointmentDate = new Date(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
 
-        //Check the availability
+
         Boolean isAvailable  = checkAvailability(selectedDoc,appointmentDate);
         if (!isAvailable) {
             System.out.println("Doctor is not available on the selected Date");
