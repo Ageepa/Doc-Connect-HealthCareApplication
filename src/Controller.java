@@ -30,7 +30,7 @@ public class Controller {
         System.out.print("Enter the Doctor id you want to add availability: ");
         int docID = scanner.nextInt();
         Doctor selectedDoctor = null;
-        //we need to fetch the doctor from the array list
+
         for(Doctor doc: allDoctors){
             if(doc.getDoctorId() == docID){
                 selectedDoctor = doc;
@@ -42,7 +42,7 @@ public class Controller {
             System.out.println("No Doctor Found!!!");
             return;
         }
-        //if the doctor is existing take the data
+
         System.out.print("Enter the Day you want to add the Availability: ");
         int day = scanner.nextInt();
         System.out.print("Enter the Month you want to add the Availability: ");
@@ -120,7 +120,7 @@ public class Controller {
             String appTime = getTimeForBooking(selectedDoc, appointmentDate);
             if (appTime != null) {
                 System.out.print("Enter patient notes: ");
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 String patientNotes = scanner.nextLine();
                 GeneralAppointment appointment = new GeneralAppointment(selectedDoc, selectedPatient, appointmentDate, appTime, patientNotes);
                 selectedDoc.setAppAppointment(appointment, appointmentDate);
@@ -140,7 +140,7 @@ public class Controller {
             String appTime = getTimeForBooking(selectedDoc, appointmentDate);
             if (appTime != null) {
                 System.out.print("Enter notes: ");
-                scanner.nextLine(); // consume newline
+                scanner.nextLine();
                 String notes = scanner.nextLine();
                 ReferralAppointment appointment = new ReferralAppointment(selectedDoc, selectedPatient, appointmentDate, appTime, referralDoctor, notes);
 
